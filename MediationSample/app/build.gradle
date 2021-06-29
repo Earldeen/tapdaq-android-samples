@@ -73,7 +73,7 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
 
     //Tapdaq
     implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.0-rc1'
