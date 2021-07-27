@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.tapdaq.bootupinterstitialsample"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 7
-        versionName "7.8.2"
+        versionName "7.9.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -33,19 +33,8 @@ android {
 }
 
 repositories {
-    // ... other project repositories
-    jcenter() // includes the MoPub SDK and AVID library
-    maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
-    maven {
-        url 'https://maven.google.com/'
-        name 'Google'
-    }
-
-    //Chartboost
-    maven { url  "https://chartboostmobile.bintray.com/Chartboost" }
-
-    //YouAppi
-    maven { url "http://repository.youappi.com/repository/release" }
+    mavenCentral()
+    google()
 
     //Tapdaq SDK & Adapters
     maven { url "https://android-sdk.tapdaq.com" }
@@ -53,13 +42,12 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     //Tapdaq
-    implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.8.2'
+    implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.0'
     //Adapters - These will automatically pull ad network dependencies
-    implementation 'com.tapdaq.sdk:TapdaqAdMobAdapter:7.8.2'
-    implementation 'com.tapdaq.sdk:TapdaqAppLovinAdapter:7.8.2'
-    implementation 'com.tapdaq.sdk:TapdaqChartboostAdapter:7.8.2'
-    implementation 'com.tapdaq.sdk:TapdaqInmobiAdapter:7.8.2'
-    implementation 'com.tapdaq.sdk:TapdaqYouAppiAdapter:7.8.2'
+    implementation 'com.tapdaq.sdk:TapdaqAdMobAdapter:7.9.0'
+    implementation 'com.tapdaq.sdk:TapdaqAppLovinAdapter:7.9.0'
+    implementation 'com.tapdaq.sdk:TapdaqChartboostAdapter:7.9.0'
+    implementation 'com.tapdaq.sdk:TapdaqInmobiAdapter:7.9.0'
 }
