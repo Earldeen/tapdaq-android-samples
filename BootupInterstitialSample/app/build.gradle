@@ -32,22 +32,25 @@ android {
     }
 }
 
-repositories {
-    mavenCentral()
+
+  repositories {
     google()
-
-    //Tapdaq SDK & Adapters
+    mavenCentral()
+  
+    //Tapdaq SDK and Adapters
     maven { url "https://android-sdk.tapdaq.com" }
-}
-
-dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    
+    //Ironsource
+    maven { url "https://android-sdk.is.com/" }
+  }
+  dependencies {
     //Tapdaq
     implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.10.0'
     //Adapters - These will automatically pull ad network dependencies
-    implementation 'com.tapdaq.sdk:TapdaqAdMobAdapter:7.10.0'
-    implementation 'com.tapdaq.sdk:TapdaqAppLovinAdapter:7.10.0'
-    implementation 'com.tapdaq.sdk:TapdaqChartboostAdapter:7.10.0'
-    implementation 'com.tapdaq.sdk:TapdaqInmobiAdapter:7.10.0'
+    
+    implementation 'com.tapdaq.sdk:TapdaqIronsourceAdapter:7.10.0'
+    
+  }
+  
+
 }
